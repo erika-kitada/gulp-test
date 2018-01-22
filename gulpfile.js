@@ -2,6 +2,7 @@ var gulp            = require('gulp'); // gulpを読み込む
 var uglify          = require('gulp-uglify'); // gulp-uglifyを読み込む
 var iconfont        = require('gulp-iconfont');
 var consolidate     = require('gulp-consolidate');
+var concat          = require("gulp-concat");
 
 // 「uglify」タスクを定義する
 gulp.task('uglify', function () {
@@ -11,7 +12,6 @@ gulp.task('uglify', function () {
     .pipe(uglify()) // uglifyを実行
     .pipe(gulp.dest('dist')) // 圧縮したファイルをdistに出力
 });
-
 
 /***************************************************************************
 * アイコンフォント
@@ -44,4 +44,13 @@ gulp.task('iconfont', function(){
     })
 
     .pipe(gulp.dest('dev/fonts')); // 【C】のパスを指定
+});
+
+
+gulp.task("concat", function() {
+  var files = ['./dev/css/common_p.css', './/dev/css/iconfont.css'];
+  gulp.src(files)
+    .pipe(concat('common.css'))
+    .pipe(gulp.dest('./dev/css/'))
+    ;
 });
