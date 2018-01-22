@@ -21,15 +21,55 @@
 }
 
 
-.icon-arrow_circle:before {
+.icon-arrow_bottom:before {
 	content: "\F001";
 }
 
-.icon-arrow_circle_b:before {
+.icon-arrow_circle_bottom:before {
 	content: "\F002";
 }
 
-.icon-cart:before {
+.icon-arrow_circle_bottom_bg:before {
 	content: "\F003";
+}
+
+.icon-arrow_circle_left:before {
+	content: "\F004";
+}
+
+.icon-arrow_circle_left_bg:before {
+	content: "\F005";
+}
+
+.icon-arrow_circle_right:before {
+	content: "\F006";
+}
+
+.icon-arrow_circle_right_bg:before {
+	content: "\F007";
+}
+
+.icon-arrow_circle_top:before {
+	content: "\F008";
+}
+
+.icon-arrow_circle_top_bg:before {
+	content: "\F009";
+}
+
+.icon-arrow_left:before {
+	content: "\F00A";
+}
+
+.icon-arrow_right:before {
+	content: "\F00B";
+}
+
+.icon-arrow_top:before {
+	content: "\F00C";
+}
+
+.icon-cart:before {
+	content: "\F00D";
 }
 
