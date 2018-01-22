@@ -1,0 +1,1 @@
+$(function(){$("#menu li:first-child").attr("id","menuListFirst"),$("#mainContents h2.title").wrap('<div class="h2"></div>'),$("#sidebar").stick_in_parent();var i=$(".returnPageTop");$(window).scroll(function(){$(this).scrollTop()>400?i.fadeIn():i.fadeOut()}),i.click(function(){return $("body, html").animate({scrollTop:0},1e3,"easeInOutSine"),!1})});
