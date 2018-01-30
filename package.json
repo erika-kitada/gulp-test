@@ -10,10 +10,18 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-changed": "^3.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-consolidate": "^0.2.0",
     "gulp-iconfont": "^9.1.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-svgmin": "^1.2.4",
     "gulp-uglify": "^3.0.0",
+    "imagemin-mozjpeg": "^7.0.0",
+    "imagemin-pngquant": "^5.0.1",
     "lodash": "^4.17.4"
+  },
+  "dependencies": {
+    "imagemin-jpeg-recompress": "^5.1.0"
   }
 }

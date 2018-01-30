@@ -22,54 +22,58 @@
 
 
 .icon-arrow_bottom:before {
-	content: "\F001";
+	content: "\EA01";
 }
 
 .icon-arrow_circle_bottom:before {
-	content: "\F002";
+	content: "\EA02";
 }
 
 .icon-arrow_circle_bottom_bg:before {
-	content: "\F003";
+	content: "\EA03";
 }
 
 .icon-arrow_circle_left:before {
-	content: "\F004";
+	content: "\EA04";
 }
 
 .icon-arrow_circle_left_bg:before {
-	content: "\F005";
+	content: "\EA05";
 }
 
 .icon-arrow_circle_right:before {
-	content: "\F006";
+	content: "\EA06";
 }
 
 .icon-arrow_circle_right_bg:before {
-	content: "\F007";
+	content: "\EA07";
 }
 
 .icon-arrow_circle_top:before {
-	content: "\F008";
+	content: "\EA08";
 }
 
 .icon-arrow_circle_top_bg:before {
-	content: "\F009";
+	content: "\EA09";
 }
 
 .icon-arrow_left:before {
-	content: "\F00A";
+	content: "\EA0A";
 }
 
 .icon-arrow_right:before {
-	content: "\F00B";
+	content: "\EA0B";
 }
 
 .icon-arrow_top:before {
-	content: "\F00C";
+	content: "\EA0C";
 }
 
 .icon-cart:before {
-	content: "\F00D";
+	content: "\EA0D";
+}
+
+.icon-good_job:before {
+	content: "\EA0E";
 }
 

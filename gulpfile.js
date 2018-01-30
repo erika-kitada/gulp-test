@@ -4,6 +4,37 @@ var iconfont        = require('gulp-iconfont');
 var consolidate     = require('gulp-consolidate');
 var concat          = require("gulp-concat");
 
+// 必要なプラグインの読み込み
+var changed  = require('gulp-changed');
+var imagemin = require('gulp-imagemin');
+var pngquant = require('imagemin-pngquant');
+var mozjpeg = require('imagemin-mozjpeg');
+
+// 圧縮前と圧縮後のディレクトリを定義
+var paths = {
+  srcDir : 'dev',
+  dstDir : 'dist'
+}
+// jpg,png,gif画像の圧縮タスク
+gulp.task('imagemin', function(){
+    var srcGlob = paths.srcDir + '/**/*.+(jpg|jpeg|png|gif)';
+    var dstGlob = paths.dstDir;
+    gulp.src( srcGlob )
+    .pipe(changed( dstGlob ))
+    .pipe(imagemin([
+       pngquant({
+         quality: 5,
+         speed: 1,
+         floyd:0
+       }),
+       mozjpeg({
+         quality:30,
+         progressive: true
+       })
+     ]))
+    .pipe(gulp.dest( dstGlob ));
+});
+
 // 「uglify」タスクを定義する
 gulp.task('uglify', function () {
   // タスクを実行するファイルを指定
@@ -21,9 +52,9 @@ gulp.task('iconfont', function(){
 
   return gulp.src(['dev/icons/*.svg']) // 【A】のパスを指定
     .pipe(iconfont({
-      startUnicode: 0xF001,
+//      startUnicode: 0xF001,
       fontName: 'iconfont',
-      formats: ['ttf', 'eot', 'woff', 'svg'],
+      formats: ['ttf', 'eot', 'woff', 'woff2', 'svg'],
       appendCodepoints:false,
       normalize: true,
       fontHeight: 500,
